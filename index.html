@@ -15,6 +15,35 @@
                 margin: auto;
                 padding: 7px;
             }
+
+            header{
+                
+                text-align: center;
+                color: navy;
+                background-color:olivedrab;
+                border-radius: 10px;
+            } 
+
+            .wrapper{
+                width: 90%;
+                box-shadow: 5px 0 rgb(112, 112, 27) inset, 
+                3px 0 2px rgb(114, 99, 99);
+                border-radius: 10px;
+                /*position: absolute;
+               /* top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);*/
+            }
+
+            #first{
+                text-align: left;
+                color: #000;
+            } 
+
+            #second, #third, #fourth, #fifth, h2{
+                background-color: olive;
+                border-radius: 1px;
+            }
         
             @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
             body {
@@ -47,6 +76,7 @@
         </header> 
 
     <main> 
+        <div class="wrapper">
         <!-- Insertion Sort Section -->
         <div id="insertion-sort" class="algorithm">
             <h2>Insertion Sort</h2>
@@ -55,7 +85,9 @@
                 array one item at a time. It is much like sorting playing cards in
                 your hands. 
             </p>
-            <pre><code class="language-javascript">//Insertion Sort Implementation
+            <pre><code class="language-javascript">
+//Insertion Sort Implementation
+
 function insertionSort(arr) {
     for (let i = 1; i < arr.length; i++) {
         let key = arr[i];
@@ -81,7 +113,9 @@ function insertionSort(arr) {
                 the smallest element from the unsorted portion and places it in the sorted
                 portion. 
             </p>
-            <pre><code class="language-javascript">// Selection Sort Implementation
+            <pre><code class="language-javascript">
+//Selection Sort Implementation
+
 function selectionSort(arr) {
     for (let i = 0; i < arr.length - 1; i++) {
         let minIndex = i;
@@ -105,7 +139,9 @@ function selectionSort(arr) {
                 Merge sort is a divide-and-conquer algorithm that splits the array 
                 into halves, recursively sorts them, and then merges the sorted halves.
             </p>
-            <pre><code class="language-javascript">// Merge Sort Implementation           
+            <pre><code class="language-javascript">
+//Merge Sort Implementation
+
 function mergeSort(arr) {
     if (arr.length <= 1) return arr;
             
@@ -142,7 +178,9 @@ function merge(left, right) {
                 Quick sort is a divide-and-conquer algorithm that selects a pivot element, 
                 partitions the array around the pivot, and recursively sorts the partitions.
             </p>
-            <pre><code class="language-javascript">//Quick Sort Implementation
+            <pre><code class="language-javascript">
+//Quick Sort Implementation
+
 function quickSort(arr) {
     if (arr.length <= 1) return arr;
             
@@ -161,6 +199,7 @@ function quickSort(arr) {
     return [...quickSort(left), pivot, ...quickSort(right)];
 }
             </code></pre>
+        </div>
         </div>
     </main>
 
